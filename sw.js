@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-b95a1f1b9bbc565f6430.js"
+    "url": "webpack-runtime-298a8db5204fa94a1a72.js"
   },
   {
     "url": "framework-d44b04477e7deb95fdc6.js"
@@ -43,10 +43,10 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "0cadc1a20cb571bac31c7c4cfdf84dff"
+    "revision": "9e1083ebb6732fb884a0d66231947bd5"
   },
   {
-    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-f2d377a6273f1d5a2cf4.js"
+    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-6fbe648957aca7c219af.js"
   },
   {
     "url": "manifest.webmanifest",
@@ -57,12 +57,12 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerRoute(/(\.js$|\.css$|static\/)/, new workbox.strategies.CacheFirst(), 'GET');
 workbox.routing.registerRoute(/^https?:.*\page-data\/.*\/page-data\.json/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
+workbox.routing.registerRoute(/^https?:.*\/page-data\/app-data\.json/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 workbox.routing.registerRoute(/^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 workbox.routing.registerRoute(/^https?:\/\/fonts\.googleapis\.com\/css/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 
 /* global importScripts, workbox, idbKeyval */
-
-importScripts(`idb-keyval-iife.min.js`)
+importScripts(`idb-keyval-3.2.0-iife.min.js`)
 
 const { NavigationRoute } = workbox.routing
 
